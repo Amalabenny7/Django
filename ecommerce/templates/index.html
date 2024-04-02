@@ -1,0 +1,59 @@
+
+
+<!Doctype Html>  
+<Html>     
+<Head>      
+<title>     
+    {% block title%}{% endblock %}  
+</title>  
+<style type=text/css>   
+body   
+{  
+height: 125vh;  
+margin-top: 80px;  
+padding: 30px;  
+background-size: cover;  
+font-family: sans-serif;  
+}  
+header {  
+background-color: orange;  
+position: fixed;  
+left: 0;  
+right: 0;  
+top: 5px;  
+height: 30px;  
+display: flex;  
+align-items: center;  
+box-shadow: 0 0 25px 0 black;  
+}  
+header * {  
+display: inline;  
+}  
+header li {  
+margin: 20px;  
+}  
+header li a {  
+color: blue;  
+text-decoration: none;  
+}  
+</style>   
+</Head>  
+<Body>   
+<header>  
+<nav>  
+<ul>  
+<li>  
+<a href="{% url "Home" %}"> Home </a>  
+</li>  
+<li>  
+<a href="{% url "About" %}"> About </a>  
+</li>  
+<li>  
+<a href="{% url "Department" %}"> Department </a>  
+</li>   
+</ul>  
+</nav>  
+</header>
+{% block content%}{% endblock %}   
+</Body>   
+</Html>  
